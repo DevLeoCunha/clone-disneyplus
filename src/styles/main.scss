@@ -5,6 +5,8 @@
 }
 
 $corDeFundo: #040714;
+$corTextoPrincipal: silver;
+$corTextoSecundario: #f9f9f9;
 
 body {
     background-color: $corDeFundo;
@@ -13,4 +15,17 @@ body {
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
+    color: $corTextoPrincipal;
+}
+
+.text--big {
+    @include text (18px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text (12px);
 }
